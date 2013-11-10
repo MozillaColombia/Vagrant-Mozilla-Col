@@ -1,0 +1,118 @@
+{
+  "mz_ele"  :  [
+
+        {
+        "mz_get"    : "https://www.mozilla.org/mission/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/mission/",
+        "mz_text"   : "MISIÒN"
+        },
+        {
+        "mz_get"    : "https://www.mozilla.org/about/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/about/",
+        "mz_text"   : "ACERCA"
+        },
+        {
+        "mz_get"    : "https://www.mozilla.org/projects/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/projects/",
+        "mz_text"   : "PROYECTOS"
+        },
+        {
+        "mz_get"    : "https://support.mozilla.org/?icn=tabz",
+        "mz_href"   : "https://support.mozilla.org/",
+        "mz_text"   : "AYUDA"
+        },
+        {
+        "mz_get"    : "https://developer.mozilla.org/?icn=tabz",
+        "mz_href"   : "https://developer.mozilla.org",
+        "mz_text"   : "RED DE DESARROLLADORES"
+        },
+
+
+        {
+        "mz_get"    : "https://www.mozilla.org/firefox/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/firefox",
+        "mz_text"   : "FIREFOX"
+        },
+        {
+        "mz_get"    : "https://www.mozilla.org/thunderbird/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/thunderbird",
+        "mz_text"   : "THUNDERBIRD"
+        },
+        {
+        "mz_get"    : "https://www.mozilla.org/firefoxos/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/firefoxos",
+        "mz_text"   : "FIREFOX OS"
+        },
+
+
+        {
+        "mz_get"    : "https://webfwd.org/?icn=tabz",
+        "mz_href"   : "https://webfwd.org/",
+        "mz_text"   : "WEBFWD"
+        },
+        {
+        "mz_get"    : "https://mozillalabs.com/?icn=tabz",
+        "mz_href"   : "https://mozillalabs.com/" ,
+        "mz_text"   : "LABS"
+        },
+        {
+        "mz_get"    : "https://webmaker.org/?icn=tabz",
+        "mz_href"   : "https://webmaker.org/" ,
+        "mz_text"   : "WEBMAKER"
+        },
+        {
+        "mz_get"    : "https://www.mozilla.org/research/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/research/" ,
+        "mz_text"   : "RESEARCH"
+        },
+
+
+        {
+        "mz_get"    : "https://www.mozilla.org/contribute/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/contribute/" ,
+        "mz_text"   : "VOLUNTARIOS"
+        },
+        {
+        "mz_get"    : "https://www.mozilla.org/en-US/about/careers.html?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/en-US/about/careers.html" ,
+        "mz_text"   : "EMPLEO"
+        },
+        {
+        "mz_get"    : "https://www.mozilla.org/en-US/about/mozilla-spaces/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/en-US/about/mozilla-spaces/" ,
+        "mz_text"   : "ENCUÈNTRANOS"
+        },
+        {
+        "mz_get"    : "https://sendto.mozilla.org/Join-Tabzilla/?icn=tabz",
+        "mz_href"   : "https://sendto.mozilla.org/Join-Tabzilla" ,
+        "mz_text"   : "DONAR"
+        },
+        {
+        "mz_get"    : "https://www.mozilla.org/community/directory.html/?icn=tabz",
+        "mz_href"   : "https://www.mozilla.org/community/directory.html" ,
+        "mz_text"   : "DIRECTORIO DE SITIOS"
+        },
+        {
+        "mz_get"    : "Mozilla",
+        "mz_text"   : "MOZILLA"
+        },
+        {
+        "mz_get"    : "Products",
+        "mz_text"   : "PRODUCTOS"
+        },
+        {
+        "mz_get"    : "Innovations",
+        "mz_text"   : "INNOVACIONES"
+        },
+        {
+        "mz_get"    : "Get Involved",
+        "mz_text"   : "INVOLUCRATE"
+        },
+        {
+        "mz_get"    : "Search",
+        "mz_text"   : "Buscar"
+        }
+
+    ]
+
+}

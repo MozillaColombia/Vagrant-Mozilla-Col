@@ -1,0 +1,431 @@
+
+/**
+*
+* @project:     Less-Trapp
+*               Grid
+* @author:      Mayccoll
+* @copyright:   2013 by the author
+* @license:     This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+* @file:        grid.trapp.less
+* @version:     v 1.2
+* @see:         https://github.com/Mayccoll/Less-Trapp
+* @date:        7-Feb-2013
+*
+*
+*/
+
+/**
+* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+*       How To :  http://less-trapp.github.com/Grid/
+* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+*   1. Import
+*       @import "trapp/grid.trapp.less";
+*
+*   2. Config
+*       .grid-conf-fix ( 60px, 20px, 12 );
+*
+*   3. Use
+*       .col ( 12, auto );
+*
+*
+* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+*       Example Use
+* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+*
+*   .class1
+*   {
+*     .col ( 12, auto );
+*
+*     .class2
+*     {
+*     .col (3 , 4 );
+*     }
+*   }
+*
+*/
+
+
+
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: *\
+           GRID Code
+\* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+
+/* ::::::: Clear Fix
+http://www.m6tt.com/2011/09/22/a-less-approach-to-clearfix
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+.clearfix{
+  zoom:1;
+
+  &:before, &:after {
+    content:"";
+    display:table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+
+/* ::::::: Grid Fix
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+.grid-conf-fix ( @p_column_width, @p_gutter_width, @p_columns ) {
+
+  @column_width:    @p_column_width;
+  @gutter_width:    @p_gutter_width;
+  @columns:         @p_columns;
+
+
+  @total_width:     ( @column_width * @columns ) + ( @gutter_width * @columns );
+  @margin:          @total_width * (( @gutter_width * .5 ) / @total_width);
+
+
+  .func_width ( @e ) {
+      @width:  @total_width * (((( @column_width + @gutter_width ) * @e ) - @gutter_width) / @total_width );
+  }
+
+
+  .col ( @columns_cant ) {
+    .func_width ( @columns_cant );
+    & {
+      float: left;
+      position: relative;
+      margin-left:    @margin;
+      margin-right:   @margin;
+      width:          @width;
+    }
+  }
+
+
+  .col ( @columns_cant, @auto: @margin ) when ( @auto = a ),
+                                              ( @auto  = auto ) {
+    .func_width ( @columns_cant );
+    & {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      width: @width;
+      clear: both;
+      .clearfix;
+
+    }
+  }
+
+
+  .col ( @columns_cant, @nth ) when ( @nth = f ),
+                                    ( @nth = first ) {
+    .func_width ( @columns_cant );
+    & {
+      float: left;
+      position: relative;
+      margin-left: 0;
+      margin-right: @margin;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col ( @columns_cant, @nth ) when ( @nth = l ),
+                                    ( @nth = last ) {
+    .func_width ( @columns_cant );
+    & {
+      float: left;
+      position: relative;
+      margin-left: @margin;
+      margin-right: 0;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col ( @columns_cant, @nth, @push ) when ( @nth = l ),
+                                           ( @nth = last )
+                                       and ( @push > 0 ) {
+    .func_width ( @columns_cant );
+    @magin_r:  @total_width * (((( @column_width + @gutter_width ) * @push ) - @gutter_width) / @total_width );
+    & {
+      float: left;
+      position: relative;
+      margin-left: @margin;
+      margin-right: @magin_r;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col ( @columns_cant, @nth ) when ( @nth = m ),
+                                    ( @nth = middle ) {
+    .func_width ( @columns_cant );
+    & {
+      float: left;
+      position: relative;
+      margin-left: @margin;
+      margin-right: @margin;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col ( @columns_cant, @nth ) when ( @nth = s ),
+                                    ( @nth = single ) {
+    .func_width ( @columns_cant );
+    @margin_r:  @total_width - @width;
+    & {
+      float: left;
+      position: relative;
+      margin-left: 0;
+      margin-right: @margin_r;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col ( @columns_cant, @nth ) when ( @nth = w ),
+                                    ( @nth = wide ) {
+    @width:  @total_width * (((( @column_width + @gutter_width ) * @columns_cant ) - @gutter_width) / @total_width ) + @gutter_width ;
+    & {
+      float: left;
+      position: relative;
+      margin-left: 0;
+      margin-right: 0;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col ( @columns_cant, @nth ) when ( isnumber( @nth )) and
+                                    ( @nth = 1 )  {
+    .func_width ( @columns_cant );
+    & {
+      float: left;
+      position: relative;
+      margin-left: 0;
+      margin-right: 0;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col ( @columns_cant, @nth ) when  ( @nth = @columns_cant ) and
+                                     ( @columns_cant = @columns )
+  {
+    .func_width ( @columns_cant );
+    & {
+      clear: both;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: @margin;
+      padding-right: @margin;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col ( @columns_cant, @p_nth ) when ( isnumber( @p_nth ) )
+                                and ( @columns_cant < @columns )
+                                and ( @p_nth > 1 ) {
+    @r:     @p_nth;
+    @f:     @p_nth;
+
+    @g:     @f+1;
+
+    // @nth_n:       @{r}n+@{f};
+    // @nth_n1:      ~"@{r}n+@{g}";
+
+    .func_width ( @columns_cant );
+
+    & {
+      float: left;
+      position: relative;
+      margin-left: @margin;
+      margin-right: @margin;
+      width: @width;
+      .clearfix;
+    }
+
+    &:nth-of-type( @{r}n+@{f} ) {
+      float: left;
+      position: relative;
+      margin-left: @margin !important;
+      margin-right: 0;
+      width: @width;
+      .clearfix;
+    }
+
+    &:last-of-type {
+      float: left;
+      position: relative;
+      margin-left: @margin;
+      margin-right: 0;
+      width: @width;
+      .clearfix;
+    }
+
+    &:nth-of-type( @{r}n+@{g} ) {
+      float: left;
+      position: relative;
+      margin-left: 0 ;
+      margin-right: @margin;
+      width: @width;
+      .clearfix;
+    }
+
+    &:first-of-type {
+      float: left;
+      position: relative;
+      margin-left: 0;
+      margin-right: @margin ;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col ( @columns_cant, @p_nth, @push_pull ) when ( isnumber( @p_nth ) )
+                                and ( @columns_cant < @columns )
+                                and ( @p_nth > 1 )
+                                and ( @push_pull > 0 ){
+    @r:     @p_nth;
+    @f:     @p_nth - @push_pull;
+
+    @g:     @f+1;
+
+    @move:  ( @column_width + @gutter_width ) * @push_pull;
+
+    // @nth_n:       ~"@{r}n+@{f}";
+    // @nth_n1:      ~"@{r}n+@{g}";
+
+    .func_width ( @columns_cant );
+
+    & {
+      float: left;
+      position: relative;
+      margin-left: @margin;
+      margin-right: @margin;
+      width: @width;
+      .clearfix;
+    }
+
+    &:nth-of-type( @{r}n+@{f} ) {
+      float: left;
+      position: relative;
+      margin-left: @margin !important;
+      margin-right: 0;
+      width: @width;
+      .clearfix;
+    }
+
+    &:last-of-type {
+      float: left;
+      position: relative;
+      margin-left: @margin;
+      margin-right: 0;
+      width: @width;
+      .clearfix;
+    }
+
+    &:nth-of-type( @{r}n+@{g} ) {
+      float: left;
+      position: relative;
+      margin-left: 0 ;
+      margin-right: @margin;
+      width: @width;
+      .clearfix;
+    }
+
+    &:first-of-type {
+      float: left;
+      position: relative;
+      margin-left: @move;
+      margin-right: @margin ;
+      width: @width;
+      .clearfix;
+    }
+  }
+
+
+  .col-s ( @parent, @numOfCols ) {
+
+    // @nth-n:~"@{numOfCols}n";
+    // @nth-n1:~"@{numOfCols}n+1";
+
+    @sub-total-width: ( @parent * @column_width ) + (( @parent - 1) * @gutter_width ) ;
+    @sub-width: (( @sub-total-width - ( @gutter_width * ( @numOfCols - 1 ))) / @numOfCols)-0.5 ;
+
+    & {
+      float: left;
+      position: relative;
+      margin-left: @margin;
+      margin-right: @margin;
+      width: @sub-width + 0;
+
+    }
+
+    &:nth-of-type( @{numOfCols}n ) {
+      float: left;
+      position: relative;
+      margin-left: @margin !important;
+      margin-right: 0;
+      width: @sub-width + 0;
+    }
+
+    &:last-of-type {
+      float: left;
+      position: relative;
+      margin-left: @margin;
+      margin-right: 0;
+      width: @sub-width + 0;
+    }
+
+    &:nth-of-type( @{numOfCols}n+1 ) {
+      float: left;
+      position: relative;
+      margin-left: 0 ;
+      margin-right: @margin;
+      width: @sub-width + 0;
+    }
+
+    &:first-of-type
+    {
+      float: left;
+      position: relative;
+      margin-left: 0;
+      margin-right: @margin ;
+      width: @sub-width + 0;
+    }
+  }
+
+
+  .col-push ( @p ) {
+    @left: ( @column_width + @gutter_width ) * @p;
+    left: @left !important;
+  }
+
+
+  .col-pull ( @p ) {
+    @left: ( @column_width + @gutter_width ) * @p;
+    left: -@left;
+  }
+}
+
+
+
+
+/* Ahora, hijo mío, a más de esto, sé amonestado. No hay fin de hacer muchos libros; y el mucho estudio es fatiga de la carne.  */

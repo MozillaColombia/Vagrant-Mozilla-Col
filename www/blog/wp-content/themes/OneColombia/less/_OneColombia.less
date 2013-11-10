@@ -1,0 +1,152 @@
+@import url("../OneMozilla/style.css");
+@import "lib/anchor.trapp.less";
+@import "lib/grid.trapp.less";
+
+.grid-conf-fix ( 60px, 20px, 12 );
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: *\
+      Header
+\* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#mh-logo ul {
+  float: right;
+  height: 0;
+  list-style: none outside none;
+  position: absolute;
+  // right: 0;
+  // top: 41px;
+  right: 178px;
+  top: 5px;
+  width: 175px;
+}
+
+#mh-logo ul .box-six {
+  background-image: url("../img/mh.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 45px;
+}
+
+
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: *\
+      Footer
+\* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#site-info  {
+  background-color: #231B1C;
+  footer {
+      width: 100%;
+  }
+}
+
+
+#footer-wrap {
+  background: none repeat scroll 0 0 #231B1C;
+  position: absolute;
+  width: 100% !important;
+
+    #colophon {
+        .col  ( 12, auto );
+        background:none repeat scroll 0 0 #231B1C;
+        color:#666;
+        font-size:.875em;
+        line-height:1.285;
+        margin: 3em 0 0;
+        padding:40px 0;
+        // width:100% !important;
+        list-style: none;
+        float: none;
+
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+
+            }
+        }
+
+        .footer-logo {
+            .col ( 3, f );
+
+            a {
+                img {
+                    margin-left: 30%;
+                }
+            }
+        }
+        .footer-license {
+            .col ( 6, m );
+            a {
+              .anchor ( #9A9796, #A7A4A3, #9A9796, #9A9796, false ); // @color, @hover, @visited, @active, @text-deco
+            }
+        }
+        .footer-nav {
+            .col ( 3, l );
+            img {
+                margin-left: 30%;
+                margin-top: -20px;
+            }
+        }
+
+    }
+
+    #colophon:after {
+        clear:both;
+        content:".";
+        display:block;
+        height:0;
+        visibility:hidden
+    }
+
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: *\
+      Hide  -> Sidebar, comments
+\* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.page-id-4 {
+  #comments,
+  #content-sub {
+    display: none;
+  }
+
+  #content-main {
+    width: 100%;
+  }
+}
+
+.page-id-12 {
+  #comments,
+  #content-sub {
+    display: none;
+  }
+
+  #content-main {
+    width: 100%;
+  }
+}
+
+.page-id-6 {
+  #comments,
+  #content-sub {
+    display: none;
+  }
+
+  #content-main {
+    width: 100%;
+  }
+}
+
+.page-id-19 {
+  #comments,
+  #content-sub {
+    display: none;
+  }
+
+  #content-main {
+    width: 100%;
+  }
+}

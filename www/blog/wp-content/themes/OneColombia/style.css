@@ -1,0 +1,16 @@
+@import url("../OneMozilla/style.css");
+
+
+/*
+Theme Name:     OneColombia
+Description:    Site theme for The Mozilla Colombia Comunity. This theme is a child of the One Mozilla WordPress theme.
+Author:         Maycoll (MiguelDavidQ)
+Template:       OneMozilla
+Version:        1.0
+*/
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: *\
+			One Mozilla
+\* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+@import url("css/ronce.css");
+@import url("css/_OneColombia.css");
