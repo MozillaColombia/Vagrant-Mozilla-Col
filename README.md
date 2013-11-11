@@ -30,12 +30,6 @@ Pasos
         $ mkdir Vagrant-Mozilla-Col
 ```
 
-- Descargar la box precise64 y la ubicamos en el directorio de trabajo
-
-```
-        http://files.vagrantup.com/precise64.box
-```
-
 - Descargar Archivos de Github ya sea clonando o descargando el archivo zip
 
 ```
@@ -45,6 +39,13 @@ Pasos
 ```
         $ git clone https://github.com/Mayccoll/Vagrant-Mozilla-Col.git .
 ```
+
+- Descargar la box precise64 y la ubicamos en el directorio de trabajo
+
+```
+        http://files.vagrantup.com/precise64.box
+```
+
 
 - El directorio debe quedar asi
 
