@@ -22,13 +22,13 @@ Tener instalado:
 
 ---------
 
-# Pasos para poner el sitio online en localhot
+# Pasos para poner el sitio online en localhost
 ----------
 
 - Descargamos los archivos
 ```
-	git clone git@github.com:Mayccoll/Vagrant-Mozilla-Col.git
-	cd Vagrant-Mozilla-Col
+    git clone git@github.com:Mayccoll/Vagrant-Mozilla-Col.git
+    cd Vagrant-Mozilla-Col
 ```
 
 - Dentro del directorio de trabajo ejecutamos
@@ -41,7 +41,7 @@ Tener instalado:
  **Listo eso es todo ya tenemos nuestro entorno de trabajo listo para trabajar.**
 
 
-Ahora abrimos Firefox y en la URL escribimos 
+Ahora abrimos Firefox y en la URL escribimos
 
 ```
         http://localhost:8080/
@@ -53,7 +53,7 @@ Se debe abrir la pagina de Mozilla Colombia totalmente funcional.
 # Directorio de Trabajo
 ----------
 
-El directorio donde estan ubicados los archivos estan en nuestra carpeta de trabajo **WWW**
+El directorio donde están ubicados los archivos  en nuestra carpeta de trabajo **WWW**
 
 ```
         Vagrant-Mozilla-Col
@@ -80,7 +80,7 @@ __________
 # Wordpress
 ----------
 
-Si queremos aceder a la administracion de wordpress
+Si queremos acceder a la administración de wordpress
 
 ```
         http://localhost:8080/blog/wp-login.php
@@ -102,13 +102,13 @@ Una vez terminemos de trabajar en la pagina apagamos la maquina virtual
         $ vagrant suspend
 ```
 
-La proxima vez que queramos volver a trabajar simplemente ejecutamos
+La próxima vez que queramos volver a trabajar simplemente ejecutamos
 
 ```
         $ vagrant up
 ```
 
-#### Notas : 
+#### Notas :
 - Preferiblemente clonar el repositorio para poder hacer pull request.
 - No actualizar wordpress ni los plugins
 - Si queremos destruir la maquina virtual ejecutamos dentro del directorio de trabajo
@@ -123,21 +123,21 @@ La proxima vez que queramos volver a trabajar simplemente ejecutamos
 
 2. Clonar el repositorio desde su fork.
 ```bash
-	git clone git@github.com:TUCUENTA/Vagrant-Mozilla-Col.git
+    git clone git@github.com:TUCUENTA/Vagrant-Mozilla-Col.git
 ```
 
 3. Agregar upstream remoto.
 ```bash
-	git remote add upstream git@github.com:Mayccoll/Vagrant-Mozilla-Col.git
-    
+    git remote add upstream git@github.com:Mayccoll/Vagrant-Mozilla-Col.git
+   
     # Esto ahora te permitirá que hacer un pull de cambios del origen localmente y combinarlos, así:
     git fetch upstream
-	git merge upstream/master
+    git merge upstream/master
 ```
 
 4. Crear una BRANCH con titulo detallado sobre lo que vas a trabajar y cambiarse a ella
 ```bash
-	git checkout -b mejora_index
+    git checkout -b mejora_index
 ```
 
 5. Trabajar
@@ -156,7 +156,32 @@ La proxima vez que queramos volver a trabajar simplemente ejecutamos
 
 8. Hacer un PUSH
 ```bash
-	git push origin mejora_index
+    git push origin mejora_index
 ```
 
 9. **Crea un PULL REQUEST**
+
+
+- - -
+
+By: ★m★
+```bash
+oooooooooo..........oooooooooo
+oooooo..................oooooo
+oooo.....oooooooooooo.....oooo
+oo.....oooooooooooooo.......oo
+o....ooooooooooooooooo.......o
+....ooooo....ooooooooooooo....
+...oooooo....oooooooooooooo...
+...oooooo....oooooooooooooo...
+...oooooo....oooooooooooooo...
+....ooooo....oooooooooooooo...
+o...ooooo....ooooooooooooo...o
+oo....ooo....ooooooooooo.....o
+ooo.....o....ooooooooo.....ooo
+ooooo........oooooo......ooooo
+ooooooo................ooooooo
+
+```
+
+
