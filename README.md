@@ -32,7 +32,7 @@ Tener instalado:
 ```
 
 - Dentro del directorio de trabajo ejecutamos
- (Este proceso dura entre 3 y 5 minutos)
+ (Este proceso puede tardar la primera vez)
 
 ```
         $ vagrant up
