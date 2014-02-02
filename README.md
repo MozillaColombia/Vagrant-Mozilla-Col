@@ -1,4 +1,4 @@
-Requisitos
+# Requisitos
 ----------
 Tener instalado:
 
@@ -21,74 +21,24 @@ Tener instalado:
 ```
 
 ---------
-Pasos
+
+# Pasos para poner el sitio online en localhot
 ----------
 
-- Creamos un Directorio donde vamos a trabajar
+- Descargamos los archivos
 ```
-        ejem: 
-        $ mkdir Vagrant-Mozilla-Col
-```
-
-- Descargar Archivos de Github ya sea clonando o descargando el archivo zip
-
-```
-        https://github.com/mozilla/One-Mozilla-blog/archive/master.zip
+	git clone git@github.com:Mayccoll/Vagrant-Mozilla-Col.git
+	cd Vagrant-Mozilla-Col
 ```
 
-```
-        $ git clone https://github.com/Mayccoll/Vagrant-Mozilla-Col.git .
-```
-
-- Descargar la box precise64 y la ubicamos en el directorio de trabajo
-
-```
-        http://files.vagrantup.com/precise64.box
-```
-
-
-- El directorio debe quedar asi
-
-```
-        Vagrant-Mozilla-Col
-        ├── puppet
-        │   ├── manifests
-        │   └── modules
-        ├── www
-        │   ├── blog
-        │   ├── main
-        │   ├── favicon.ico
-        │   ├── index.php
-        │   ├── notas.txt
-        │   ├── README.md
-        │   └── robots.txt
-        └── Vagrantfile
-        └── precise64.box
-```
-
-- Por consola añadimos nuestra box a vagrant
-
-```
-        $ vagrant box add precise64 [RUTA_A_BOX]
-
-        Ejem:
-        $ vagrant box add precise64 /home/Vagrant-Mozilla-Col/precise64.box
-```
-
-- Verificamos que nuestra box esta agregada a vagrant
-```
-        $ vagrant box list
-        precise64 (virtualbox)
-```
-
-- Por consola dentro del directorio de trabajo ejecutamos
- (Este proceso dura entre3 y 5 minutos)
+- Dentro del directorio de trabajo ejecutamos
+ (Este proceso dura entre 3 y 5 minutos)
 
 ```
         $ vagrant up
 ```
 
-Listo eso es todo ya tenemos nuestro entorno de trabajo listo para trabajar.
+ **Listo eso es todo ya tenemos nuestro entorno de trabajo listo para trabajar.**
 
 
 Ahora abrimos Firefox y en la URL escribimos 
@@ -100,7 +50,8 @@ Ahora abrimos Firefox y en la URL escribimos
 Se debe abrir la pagina de Mozilla Colombia totalmente funcional.
 
 --------
-### Directorio de Trabajo
+# Directorio de Trabajo
+----------
 
 El directorio donde estan ubicados los archivos estan en nuestra carpeta de trabajo **WWW**
 
@@ -126,7 +77,8 @@ El archivo CSS para editar del blog (wordpress) esta en:
         /Vagrant-Mozilla-Col/www/blog/wp-content/themes/OneColombia/less/_OneColombia.less
 ```
 __________
-### Wordpress
+# Wordpress
+----------
 
 Si queremos aceder a la administracion de wordpress
 
@@ -139,7 +91,8 @@ Si queremos aceder a la administracion de wordpress
 #### Pass: **vagrant**
 
 ___________
-### Cerrar
+# Cerrar
+----------
 
 Una vez terminemos de trabajar en la pagina apagamos la maquina virtual
 
@@ -163,3 +116,47 @@ La proxima vez que queramos volver a trabajar simplemente ejecutamos
 ```
     $ vagrant destroy
 ```
+
+# Como contribuir (IMPORTANTE)
+----------
+1. **Hacer un FORK en GITHUB.**
+
+2. Clonar el repositorio desde su fork.
+```bash
+	git clone git@github.com:TUCUENTA/Vagrant-Mozilla-Col.git
+```
+
+3. Agregar upstream remoto.
+```bash
+	git remote add upstream git@github.com:Mayccoll/Vagrant-Mozilla-Col.git
+    
+    # Esto ahora te permitirá que hacer un pull de cambios del origen localmente y combinarlos, así:
+    git fetch upstream
+	git merge upstream/master
+```
+
+4. Crear una BRANCH con titulo detallado sobre lo que vas a trabajar y cambiarse a ella
+```bash
+	git checkout -b mejora_index
+```
+
+5. Trabajar
+
+6. Agregar los cambios
+```bash
+    git add FILE
+    # o
+    git add .
+```
+
+7. Hacer COMMIT
+```bash
+    git commit -am "COMENTARIO DETALLADO"
+```
+
+8. Hacer un PUSH
+```bash
+	git push origin mejora_index
+```
+
+9. **Crea un PULL REQUEST**
