@@ -119,14 +119,14 @@ La próxima vez que queramos volver a trabajar simplemente ejecutamos
 
 # Como contribuir (IMPORTANTE)
 ----------
-1. **Hacer un FORK en GITHUB.**
+- **Hacer un FORK en GITHUB.**
 
-2. Clonar el repositorio desde su fork.
+- Clonar el repositorio desde su fork.
 ```bash
     git clone git@github.com:TUCUENTA/Vagrant-Mozilla-Col.git
 ```
 
-3. Agregar upstream remoto.
+- Agregar upstream remoto.
 ```bash
     git remote add upstream git@github.com:Mayccoll/Vagrant-Mozilla-Col.git
    
@@ -135,31 +135,31 @@ La próxima vez que queramos volver a trabajar simplemente ejecutamos
     git merge upstream/master
 ```
 
-4. Crear una BRANCH con titulo detallado sobre lo que vas a trabajar y cambiarse a ella
+- Crear una BRANCH con titulo detallado sobre lo que vas a trabajar y cambiarse a ella
 ```bash
     git checkout -b mejora_index
 ```
 
-5. Trabajar
+- Trabajar
 
-6. Agregar los cambios
+- Agregar los cambios
 ```bash
     git add FILE
     # o
     git add .
 ```
 
-7. Hacer COMMIT
+- Hacer COMMIT
 ```bash
     git commit -am "COMENTARIO DETALLADO"
 ```
 
-8. Hacer un PUSH
+- Hacer un PUSH
 ```bash
     git push origin mejora_index
 ```
 
-9. **Crea un PULL REQUEST**
+- **Crea un PULL REQUEST**
 
 
 - - -
