@@ -27,7 +27,7 @@ Tener instalado:
 
 - Descargamos los archivos
 ```
-    git clone git@github.com:Mayccoll/Vagrant-Mozilla-Col.git
+    git clone git@github.com:MozillaColombia/Vagrant-Mozilla-Col.git
     cd Vagrant-Mozilla-Col
 ```
 
@@ -128,7 +128,7 @@ La próxima vez que queramos volver a trabajar simplemente ejecutamos
 
 - Agregar upstream remoto.
 ```bash
-    git remote add upstream git@github.com:Mayccoll/Vagrant-Mozilla-Col.git
+    git remote add upstream git@github.com:MozillaColombia/Vagrant-Mozilla-Col.git
    
     # Esto ahora te permitirá que hacer un pull de cambios del origen localmente y combinarlos, así:
     git fetch upstream
